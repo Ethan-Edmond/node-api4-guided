@@ -6,6 +6,12 @@ const port = process.env.PORT || 5000;
 
 server.use(express.json());
 
+server.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'The Server is up'
+  });
+});
+
 server.get('/api', (req, res) => {
   res.status(200).json({
     message: 'Get endpoint is up!!!!!'
